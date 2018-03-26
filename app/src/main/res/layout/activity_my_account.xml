@@ -25,14 +25,146 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:id="@+id/image"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="66dp"
+                android:layout_marginTop="46dp"
                 android:src="@drawable/p" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/linearLayout"
+                android:layout_marginEnd="18dp"
+                android:layout_toStartOf="@+id/image"
+                android:src="@drawable/flames" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/linearLayout"
+                android:layout_marginStart="15dp"
+                android:background="#FFF"
+                android:layout_toEndOf="@+id/image"
+                android:src="@drawable/ic_border_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:gravity="center"
+                    android:textSize="22dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:id="@+id/l1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/l2"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/linearLayout">
+
+                <Button
+                    android:id="@+id/profile"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="My Profile"
+                    android:textColor="#000"
+                    android:background="@drawable/shape2"
+
+                    />
+
+                <Button
+                    android:id="@+id/preferences"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="Preferences"
+                    android:textColor="#000"
+                    android:background="@drawable/shape2"
+
+                    />
+                <Button
+                    android:id="@+id/support"
+                    android:layout_marginBottom="10dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="Support"
+                    android:textColor="#000"
+                    android:background="@drawable/shape2"
+
+                    />
+
+                <Button
+                    android:id="@+id/Flames"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Flames"
+                    android:textColor="#000"
+                    android:background="@drawable/shape2"
+
+                    />
+
+
+
+            </LinearLayout>
 
 
 
@@ -45,15 +177,17 @@
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="start"
+        android:layout_marginBottom="14dp"
         android:background="@android:color/white"
         android:fitsSystemWindows="true"
-        app:itemBackground="@android:color/white"
-        app:headerLayout="@layout/navheader"
-        app:menu="@menu/menu_navigation"
         app:arc_cropDirection="cropInside"
         app:arc_width="96dp"
-        />
+        app:headerLayout="@layout/navheader"
+        app:itemBackground="@android:color/white"
+        app:menu="@menu/menu_navigation" />
 
 
 

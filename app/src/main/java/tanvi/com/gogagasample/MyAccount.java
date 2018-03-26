@@ -41,10 +41,10 @@ public class MyAccount extends AppCompatActivity {
         navigationView.setItemIconTintList(null);
 
         image = findViewById(R.id.image);
-
-        BitmapDrawable drawable = (BitmapDrawable) image.getDrawable();
-        Bitmap bitmap = drawable.getBitmap();
-        Blurry.with(this).radius(40).from(bitmap).into(image);
+//
+//        BitmapDrawable drawable = (BitmapDrawable) image.getDrawable();
+//        Bitmap bitmap = drawable.getBitmap();
+//        Blurry.with(this).radius(40).from(bitmap).into(image);
 
     }
 }
